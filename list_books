@@ -46,7 +46,7 @@ def main():
             title = input("Please enter the title of the book you would like to search for: ")
             search_book(title)
         elif choice == '4':
-            print("List of books: ", list_books())
+            print("List of books:", list_books())
         elif choice == '5':
             print("End of the program.")
             break
