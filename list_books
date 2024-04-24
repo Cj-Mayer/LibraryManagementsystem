@@ -17,13 +17,15 @@ def search_book(title):
 
 
 def list_books():
-    # converting dictionary into a list then printing that result
-    list_books = list(library.items())
-    print(list_books)
+    # converting dictionary to list then returning that result
+    list_books = [(key, value) for key, value in library.items()]
+    return list_books
+
 
 
 
 def main():
+
     while True:
         print("\nWelcome to the Library Management System")
         print("1. Add a book")
@@ -44,7 +46,7 @@ def main():
             title = input("Please enter the title of the book you would like to search for: ")
             search_book(title)
         elif choice == '4':
-            list_books()
+            print("List of books:", list_books())
         elif choice == '5':
             print("End of the program.")
             break
